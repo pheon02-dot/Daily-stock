@@ -78,6 +78,29 @@ def parse_series(result, symbol=None):
     return points
 
 
+def parse_ohlc(result, symbol=None):
+    timestamps = result.get("timestamp") or []
+    quote_data = ((result.get("indicators") or {}).get("quote") or [{}])[0]
+    opens = quote_data.get("open") or []
+    highs = quote_data.get("high") or []
+    lows = quote_data.get("low") or []
+    closes = quote_data.get("close") or []
+    candles = []
+    for ts, open_, high, low, close in zip(timestamps, opens, highs, lows, closes):
+        values = (open_, high, low, close)
+        if any(value is None or not math.isfinite(value) for value in values):
+            continue
+        scale = 0.1 if symbol == "^TNX" and float(close) > 20 else 1.0
+        candles.append({
+            "timestamp": int(ts),
+            "open": round(float(open_) * scale, 8),
+            "high": round(float(high) * scale, 8),
+            "low": round(float(low) * scale, 8),
+            "close": round(float(close) * scale, 8),
+        })
+    return candles
+
+
 def quote_summary(meta, daily):
     # The chartPreviousClose field can refer to the session before the whole
     # requested range. Use the final two daily observations for true 1-day moves.
@@ -166,12 +189,15 @@ def main():
             daily_result, daily_url = fetch_chart(symbol, "1d", "3mo")
             intraday = parse_series(intra_result, symbol)
             daily = parse_series(daily_result, symbol)
+            intraday_ohlc = parse_ohlc(intra_result, symbol)
+            daily_ohlc = parse_ohlc(daily_result, symbol)
             meta = daily_result.get("meta") or intra_result.get("meta") or {}
             data["assets"][key] = {
                 "symbol": symbol, "name": name, "group": group,
                 "currency": meta.get("currency"), "exchange": meta.get("fullExchangeName") or meta.get("exchangeName"),
                 "timezone": meta.get("exchangeTimezoneName"), "quote": quote_summary(meta, daily),
                 "intraday_5m": intraday, "daily_3mo": daily,
+                "intraday_5m_ohlc": intraday_ohlc, "daily_3mo_ohlc": daily_ohlc,
                 "source_urls": {"intraday": intra_url, "daily": daily_url},
             }
         except Exception as exc:
