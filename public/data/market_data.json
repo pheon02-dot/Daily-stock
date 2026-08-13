@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T16:06:12.016894+00:00",
+  "generated_at": "2026-08-13T16:16:16.464551+00:00",
   "source": "Yahoo Finance chart v8",
   "assets": {
     "sp500": {
@@ -10,10 +10,10 @@
       "exchange": "SNP",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 7784.52978516,
+        "latest": 7780.31005859,
         "previous": 7748.5,
-        "change": 36.02978516,
-        "change_percent": 0.465
+        "change": 31.81005859,
+        "change_percent": 0.4105
       },
       "intraday_5m": [
         {
@@ -142,11 +142,19 @@
         },
         {
           "timestamp": 1786637100,
-          "value": 7784.29980469
+          "value": 7782.75
         },
         {
-          "timestamp": 1786637170,
-          "value": 7784.75
+          "timestamp": 1786637400,
+          "value": 7779.95019531
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 7780.45019531
+        },
+        {
+          "timestamp": 1786637775,
+          "value": 7780.31005859
         }
       ],
       "daily_3mo": [
@@ -404,7 +412,7 @@
         },
         {
           "timestamp": 1786627800,
-          "value": 7784.52978516
+          "value": 7780.31005859
         }
       ],
       "source_urls": {
@@ -420,10 +428,10 @@
       "exchange": "Nasdaq GIDS",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 26754.5,
+        "latest": 26733.02929688,
         "previous": 26588.49023438,
-        "change": 166.00976562,
-        "change_percent": 0.6244
+        "change": 144.5390625,
+        "change_percent": 0.5436
       },
       "intraday_5m": [
         {
@@ -552,11 +560,19 @@
         },
         {
           "timestamp": 1786637100,
-          "value": 26752.84179688
+          "value": 26751.56640625
         },
         {
-          "timestamp": 1786637168,
-          "value": 26753.40039062
+          "timestamp": 1786637400,
+          "value": 26732.578125
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 26734.54882812
+        },
+        {
+          "timestamp": 1786637774,
+          "value": 26733.02929688
         }
       ],
       "daily_3mo": [
@@ -814,7 +830,7 @@
         },
         {
           "timestamp": 1786627800,
-          "value": 26754.5
+          "value": 26733.02929688
         }
       ],
       "source_urls": {
@@ -830,10 +846,10 @@
       "exchange": "DJI",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 53699.87109375,
+        "latest": 53672.0390625,
         "previous": 53770.26953125,
-        "change": -70.3984375,
-        "change_percent": -0.1309
+        "change": -98.23046875,
+        "change_percent": -0.1827
       },
       "intraday_5m": [
         {
@@ -962,11 +978,19 @@
         },
         {
           "timestamp": 1786637100,
-          "value": 53689.71875
+          "value": 53667.26171875
         },
         {
-          "timestamp": 1786637172,
-          "value": 53699.80859375
+          "timestamp": 1786637400,
+          "value": 53673.37890625
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 53673.83984375
+        },
+        {
+          "timestamp": 1786637775,
+          "value": 53672.0390625
         }
       ],
       "daily_3mo": [
@@ -1224,7 +1248,7 @@
         },
         {
           "timestamp": 1786627800,
-          "value": 53699.87109375
+          "value": 53672.0390625
         }
       ],
       "source_urls": {
@@ -1240,10 +1264,10 @@
       "exchange": "Chicago Options",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 3048.55908203,
+        "latest": 3048.53442383,
         "previous": 3045.47998047,
-        "change": 3.07910156,
-        "change_percent": 0.1011
+        "change": 3.05444336,
+        "change_percent": 0.1003
       },
       "intraday_5m": [
         {
@@ -1360,11 +1384,19 @@
         },
         {
           "timestamp": 1786636200,
-          "value": 3048.50341797
+          "value": 3047.50341797
         },
         {
-          "timestamp": 1786636270,
-          "value": 3048.55908203
+          "timestamp": 1786636500,
+          "value": 3048.00830078
+        },
+        {
+          "timestamp": 1786636800,
+          "value": 3048.41992188
+        },
+        {
+          "timestamp": 1786636875,
+          "value": 3048.53442383
         }
       ],
       "daily_3mo": [
@@ -1622,12 +1654,430 @@
         },
         {
           "timestamp": 1786627800,
-          "value": 3048.55908203
+          "value": 3048.53442383
         }
       ],
       "source_urls": {
         "intraday": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?interval=5m&range=1d&events=history",
         "daily": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?interval=1d&range=3mo&events=history"
+      }
+    },
+    "sox": {
+      "symbol": "^SOX",
+      "name": "Philadelphia Semiconductor Index",
+      "group": "US indices",
+      "currency": "USD",
+      "exchange": "Nasdaq GIDS",
+      "timezone": "America/New_York",
+      "quote": {
+        "latest": 12629.609375,
+        "previous": 12399.37988281,
+        "change": 230.22949219,
+        "change_percent": 1.8568
+      },
+      "intraday_5m": [
+        {
+          "timestamp": 1786627800,
+          "value": 12438.17773438
+        },
+        {
+          "timestamp": 1786628100,
+          "value": 12495.20605469
+        },
+        {
+          "timestamp": 1786628400,
+          "value": 12470.88867188
+        },
+        {
+          "timestamp": 1786628700,
+          "value": 12562.95800781
+        },
+        {
+          "timestamp": 1786629000,
+          "value": 12558.04101562
+        },
+        {
+          "timestamp": 1786629300,
+          "value": 12598.66015625
+        },
+        {
+          "timestamp": 1786629600,
+          "value": 12590.05761719
+        },
+        {
+          "timestamp": 1786629900,
+          "value": 12588.24121094
+        },
+        {
+          "timestamp": 1786630200,
+          "value": 12598.06640625
+        },
+        {
+          "timestamp": 1786630500,
+          "value": 12575.87890625
+        },
+        {
+          "timestamp": 1786630800,
+          "value": 12594.50976562
+        },
+        {
+          "timestamp": 1786631100,
+          "value": 12627.20898438
+        },
+        {
+          "timestamp": 1786631400,
+          "value": 12653.6640625
+        },
+        {
+          "timestamp": 1786631700,
+          "value": 12653.2578125
+        },
+        {
+          "timestamp": 1786632000,
+          "value": 12644.95019531
+        },
+        {
+          "timestamp": 1786632300,
+          "value": 12639.41113281
+        },
+        {
+          "timestamp": 1786632600,
+          "value": 12643.94433594
+        },
+        {
+          "timestamp": 1786632900,
+          "value": 12636.61816406
+        },
+        {
+          "timestamp": 1786633200,
+          "value": 12646.29003906
+        },
+        {
+          "timestamp": 1786633500,
+          "value": 12665.50976562
+        },
+        {
+          "timestamp": 1786633800,
+          "value": 12676.61425781
+        },
+        {
+          "timestamp": 1786634100,
+          "value": 12669.90820312
+        },
+        {
+          "timestamp": 1786634400,
+          "value": 12698.5390625
+        },
+        {
+          "timestamp": 1786634700,
+          "value": 12676.07421875
+        },
+        {
+          "timestamp": 1786635000,
+          "value": 12615.01269531
+        },
+        {
+          "timestamp": 1786635300,
+          "value": 12612.22558594
+        },
+        {
+          "timestamp": 1786635600,
+          "value": 12624.59082031
+        },
+        {
+          "timestamp": 1786635900,
+          "value": 12593.39550781
+        },
+        {
+          "timestamp": 1786636200,
+          "value": 12568.83398438
+        },
+        {
+          "timestamp": 1786636500,
+          "value": 12577.03125
+        },
+        {
+          "timestamp": 1786636800,
+          "value": 12614.19921875
+        },
+        {
+          "timestamp": 1786637100,
+          "value": 12642.234375
+        },
+        {
+          "timestamp": 1786637400,
+          "value": 12610.92480469
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 12631.3125
+        },
+        {
+          "timestamp": 1786637774,
+          "value": 12629.609375
+        }
+      ],
+      "daily_3mo": [
+        {
+          "timestamp": 1778679000,
+          "value": 12017.98046875
+        },
+        {
+          "timestamp": 1778765400,
+          "value": 12073.78027344
+        },
+        {
+          "timestamp": 1778851800,
+          "value": 11588.45996094
+        },
+        {
+          "timestamp": 1779111000,
+          "value": 11302.51953125
+        },
+        {
+          "timestamp": 1779197400,
+          "value": 11305.5
+        },
+        {
+          "timestamp": 1779283800,
+          "value": 11813.29003906
+        },
+        {
+          "timestamp": 1779370200,
+          "value": 11964.08007812
+        },
+        {
+          "timestamp": 1779456600,
+          "value": 12202.54003906
+        },
+        {
+          "timestamp": 1779802200,
+          "value": 12876.91015625
+        },
+        {
+          "timestamp": 1779888600,
+          "value": 12702.19042969
+        },
+        {
+          "timestamp": 1779975000,
+          "value": 12829.13964844
+        },
+        {
+          "timestamp": 1780061400,
+          "value": 12829.37988281
+        },
+        {
+          "timestamp": 1780320600,
+          "value": 12965.65039062
+        },
+        {
+          "timestamp": 1780407000,
+          "value": 13726.26953125
+        },
+        {
+          "timestamp": 1780493400,
+          "value": 13916.95996094
+        },
+        {
+          "timestamp": 1780579800,
+          "value": 13617.5
+        },
+        {
+          "timestamp": 1780666200,
+          "value": 12220.75976562
+        },
+        {
+          "timestamp": 1780925400,
+          "value": 12906.69042969
+        },
+        {
+          "timestamp": 1781011800,
+          "value": 12657.80957031
+        },
+        {
+          "timestamp": 1781098200,
+          "value": 12206.45996094
+        },
+        {
+          "timestamp": 1781184600,
+          "value": 13171.44042969
+        },
+        {
+          "timestamp": 1781271000,
+          "value": 13371.46972656
+        },
+        {
+          "timestamp": 1781530200,
+          "value": 14099.62011719
+        },
+        {
+          "timestamp": 1781616600,
+          "value": 13294.21972656
+        },
+        {
+          "timestamp": 1781703000,
+          "value": 13477.0703125
+        },
+        {
+          "timestamp": 1781789400,
+          "value": 14341.78027344
+        },
+        {
+          "timestamp": 1782135000,
+          "value": 14634.71972656
+        },
+        {
+          "timestamp": 1782221400,
+          "value": 13482.50976562
+        },
+        {
+          "timestamp": 1782307800,
+          "value": 13458.20019531
+        },
+        {
+          "timestamp": 1782394200,
+          "value": 13940.87011719
+        },
+        {
+          "timestamp": 1782480600,
+          "value": 13203.5703125
+        },
+        {
+          "timestamp": 1782739800,
+          "value": 13709.66015625
+        },
+        {
+          "timestamp": 1782826200,
+          "value": 14246.95996094
+        },
+        {
+          "timestamp": 1782912600,
+          "value": 13353.28027344
+        },
+        {
+          "timestamp": 1782999000,
+          "value": 12626.21972656
+        },
+        {
+          "timestamp": 1783344600,
+          "value": 12900.13964844
+        },
+        {
+          "timestamp": 1783431000,
+          "value": 12300.51953125
+        },
+        {
+          "timestamp": 1783517400,
+          "value": 12574.96972656
+        },
+        {
+          "timestamp": 1783603800,
+          "value": 12960.0
+        },
+        {
+          "timestamp": 1783690200,
+          "value": 12967.16015625
+        },
+        {
+          "timestamp": 1783949400,
+          "value": 12347.78027344
+        },
+        {
+          "timestamp": 1784035800,
+          "value": 12661.9296875
+        },
+        {
+          "timestamp": 1784122200,
+          "value": 12398.88964844
+        },
+        {
+          "timestamp": 1784208600,
+          "value": 11867.5
+        },
+        {
+          "timestamp": 1784295000,
+          "value": 11673.88964844
+        },
+        {
+          "timestamp": 1784554200,
+          "value": 11743.84960938
+        },
+        {
+          "timestamp": 1784640600,
+          "value": 12356.16015625
+        },
+        {
+          "timestamp": 1784727000,
+          "value": 12410.66992188
+        },
+        {
+          "timestamp": 1784813400,
+          "value": 12343.83984375
+        },
+        {
+          "timestamp": 1784899800,
+          "value": 11818.87988281
+        },
+        {
+          "timestamp": 1785159000,
+          "value": 11554.87988281
+        },
+        {
+          "timestamp": 1785245400,
+          "value": 11035.6796875
+        },
+        {
+          "timestamp": 1785331800,
+          "value": 10447.49023438
+        },
+        {
+          "timestamp": 1785418200,
+          "value": 11302.99023438
+        },
+        {
+          "timestamp": 1785504600,
+          "value": 11311.08007812
+        },
+        {
+          "timestamp": 1785763800,
+          "value": 11430.34960938
+        },
+        {
+          "timestamp": 1785850200,
+          "value": 12179.25976562
+        },
+        {
+          "timestamp": 1785936600,
+          "value": 12008.87988281
+        },
+        {
+          "timestamp": 1786023000,
+          "value": 12048.69042969
+        },
+        {
+          "timestamp": 1786109400,
+          "value": 12356.79003906
+        },
+        {
+          "timestamp": 1786368600,
+          "value": 11993.86035156
+        },
+        {
+          "timestamp": 1786455000,
+          "value": 12098.46972656
+        },
+        {
+          "timestamp": 1786541400,
+          "value": 12399.37988281
+        },
+        {
+          "timestamp": 1786627800,
+          "value": 12629.609375
+        }
+      ],
+      "source_urls": {
+        "intraday": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?interval=5m&range=1d&events=history",
+        "daily": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?interval=1d&range=3mo&events=history"
       }
     },
     "stoxx600": {
@@ -5300,10 +5750,18 @@
         },
         {
           "timestamp": 1786636200,
-          "value": 4.64099979
+          "value": 4.64300013
         },
         {
-          "timestamp": 1786636265,
+          "timestamp": 1786636500,
+          "value": 4.64300013
+        },
+        {
+          "timestamp": 1786636800,
+          "value": 4.64300013
+        },
+        {
+          "timestamp": 1786636875,
           "value": 4.64099979
         }
       ],
@@ -5578,10 +6036,10 @@
       "exchange": "Cboe Indices",
       "timezone": "America/Chicago",
       "quote": {
-        "latest": 14.68999958,
+        "latest": 14.65999985,
         "previous": 14.55000019,
-        "change": 0.13999939,
-        "change_percent": 0.9622
+        "change": 0.10999966,
+        "change_percent": 0.756
       },
       "intraday_5m": [
         {
@@ -5998,11 +6456,19 @@
         },
         {
           "timestamp": 1786636200,
-          "value": 14.69999981
+          "value": 14.68999958
         },
         {
-          "timestamp": 1786636261,
-          "value": 14.68999958
+          "timestamp": 1786636500,
+          "value": 14.67000008
+        },
+        {
+          "timestamp": 1786636800,
+          "value": 14.65999985
+        },
+        {
+          "timestamp": 1786636876,
+          "value": 14.65999985
         }
       ],
       "daily_3mo": [
@@ -6264,7 +6730,7 @@
         },
         {
           "timestamp": 1786604400,
-          "value": 14.68999958
+          "value": 14.65999985
         }
       ],
       "source_urls": {
@@ -6280,10 +6746,10 @@
       "exchange": "ICE Futures",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 99.9260025,
+        "latest": 99.92299652,
         "previous": 100.01000214,
-        "change": -0.08399964,
-        "change_percent": -0.084
+        "change": -0.08700562,
+        "change_percent": -0.087
       },
       "intraday_5m": [
         {
@@ -6860,11 +7326,19 @@
         },
         {
           "timestamp": 1786636500,
-          "value": 99.92500305
+          "value": 99.93000031
         },
         {
-          "timestamp": 1786636572,
-          "value": 99.9260025
+          "timestamp": 1786636800,
+          "value": 99.92199707
+        },
+        {
+          "timestamp": 1786637100,
+          "value": 99.9280014
+        },
+        {
+          "timestamp": 1786637177,
+          "value": 99.92299652
         }
       ],
       "daily_3mo": [
@@ -7122,7 +7596,7 @@
         },
         {
           "timestamp": 1786593600,
-          "value": 99.9260025
+          "value": 99.92299652
         }
       ],
       "source_urls": {
@@ -7138,10 +7612,10 @@
       "exchange": "CCY",
       "timezone": "Europe/London",
       "quote": {
-        "latest": 159.3500061,
+        "latest": 159.42100525,
         "previous": 159.26499939,
-        "change": 0.08500671,
-        "change_percent": 0.0534
+        "change": 0.15600586,
+        "change_percent": 0.098
       },
       "intraday_5m": [
         {
@@ -7966,11 +8440,19 @@
         },
         {
           "timestamp": 1786637100,
-          "value": 159.35299683
+          "value": 159.352005
         },
         {
-          "timestamp": 1786637174,
-          "value": 159.3500061
+          "timestamp": 1786637400,
+          "value": 159.41700745
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 159.41700745
+        },
+        {
+          "timestamp": 1786637779,
+          "value": 159.43200684
         }
       ],
       "daily_3mo": [
@@ -8239,8 +8721,8 @@
           "value": 159.26499939
         },
         {
-          "timestamp": 1786637174,
-          "value": 159.3500061
+          "timestamp": 1786637778,
+          "value": 159.42100525
         }
       ],
       "source_urls": {
@@ -8256,10 +8738,10 @@
       "exchange": "CCY",
       "timezone": "Europe/London",
       "quote": {
-        "latest": 1417.61999512,
+        "latest": 1418.17004395,
         "previous": 1412.18005371,
-        "change": 5.43994141,
-        "change_percent": 0.3852
+        "change": 5.98999024,
+        "change_percent": 0.4242
       },
       "intraday_5m": [
         {
@@ -8956,11 +9438,19 @@
         },
         {
           "timestamp": 1786637100,
-          "value": 1417.61999512
+          "value": 1417.70996094
         },
         {
-          "timestamp": 1786637169,
-          "value": 1417.61999512
+          "timestamp": 1786637400,
+          "value": 1418.07995605
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 1417.92004395
+        },
+        {
+          "timestamp": 1786637770,
+          "value": 1418.17004395
         }
       ],
       "daily_3mo": [
@@ -9229,8 +9719,8 @@
           "value": 1412.18005371
         },
         {
-          "timestamp": 1786637169,
-          "value": 1417.61999512
+          "timestamp": 1786637770,
+          "value": 1418.17004395
         }
       ],
       "source_urls": {
@@ -9246,10 +9736,10 @@
       "exchange": "NY Mercantile",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 82.59999847,
+        "latest": 82.52999878,
         "previous": 83.26999664,
-        "change": -0.66999817,
-        "change_percent": -0.8046
+        "change": -0.73999786,
+        "change_percent": -0.8887
       },
       "intraday_5m": [
         {
@@ -9829,8 +10319,16 @@
           "value": 82.56999969
         },
         {
-          "timestamp": 1786636574,
-          "value": 82.59999847
+          "timestamp": 1786636800,
+          "value": 82.63999939
+        },
+        {
+          "timestamp": 1786637100,
+          "value": 82.44999695
+        },
+        {
+          "timestamp": 1786637178,
+          "value": 82.52999878
         }
       ],
       "daily_3mo": [
@@ -10088,7 +10586,7 @@
         },
         {
           "timestamp": 1786593600,
-          "value": 82.59999847
+          "value": 82.52999878
         }
       ],
       "source_urls": {
@@ -10104,10 +10602,10 @@
       "exchange": "COMEX",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 4423.39990234,
+        "latest": 4420.39990234,
         "previous": 4408.89990234,
-        "change": 14.5,
-        "change_percent": 0.3289
+        "change": 11.5,
+        "change_percent": 0.2608
       },
       "intraday_5m": [
         {
@@ -10687,8 +11185,16 @@
           "value": 4422.39990234
         },
         {
-          "timestamp": 1786636572,
-          "value": 4423.20019531
+          "timestamp": 1786636800,
+          "value": 4420.70019531
+        },
+        {
+          "timestamp": 1786637100,
+          "value": 4415.79980469
+        },
+        {
+          "timestamp": 1786637178,
+          "value": 4420.39990234
         }
       ],
       "daily_3mo": [
@@ -10946,7 +11452,7 @@
         },
         {
           "timestamp": 1786593600,
-          "value": 4423.39990234
+          "value": 4420.39990234
         }
       ],
       "source_urls": {
@@ -10962,10 +11468,10 @@
       "exchange": "COMEX",
       "timezone": "America/New_York",
       "quote": {
-        "latest": 64.83999634,
+        "latest": 64.81500244,
         "previous": 65.55500031,
-        "change": -0.71500397,
-        "change_percent": -1.0907
+        "change": -0.73999787,
+        "change_percent": -1.1288
       },
       "intraday_5m": [
         {
@@ -11545,8 +12051,16 @@
           "value": 64.83000183
         },
         {
-          "timestamp": 1786636575,
+          "timestamp": 1786636800,
           "value": 64.83999634
+        },
+        {
+          "timestamp": 1786637100,
+          "value": 64.74500275
+        },
+        {
+          "timestamp": 1786637147,
+          "value": 64.81500244
         }
       ],
       "daily_3mo": [
@@ -11804,7 +12318,7 @@
         },
         {
           "timestamp": 1786593600,
-          "value": 64.83999634
+          "value": 64.81500244
         }
       ],
       "source_urls": {
@@ -11820,10 +12334,10 @@
       "exchange": "CCC",
       "timezone": "UTC",
       "quote": {
-        "latest": 63432.8984375,
+        "latest": 63406.94921875,
         "previous": 63402.43359375,
-        "change": 30.46484375,
-        "change_percent": 0.048
+        "change": 4.515625,
+        "change_percent": 0.0071
       },
       "intraday_5m": [
         {
@@ -12600,11 +13114,19 @@
         },
         {
           "timestamp": 1786637100,
-          "value": 63427.01953125
+          "value": 63381.7890625
         },
         {
-          "timestamp": 1786637172,
-          "value": 63432.8984375
+          "timestamp": 1786637400,
+          "value": 63399.0
+        },
+        {
+          "timestamp": 1786637700,
+          "value": 63393.109375
+        },
+        {
+          "timestamp": 1786637778,
+          "value": 63406.94921875
         }
       ],
       "daily_3mo": [
@@ -12978,7 +13500,7 @@
         },
         {
           "timestamp": 1786579200,
-          "value": 63432.8984375
+          "value": 63406.94921875
         }
       ],
       "source_urls": {
