@@ -19,6 +19,7 @@ SYMBOLS = {
     "nasdaq": ("^IXIC", "Nasdaq Composite", "US indices"),
     "dow": ("^DJI", "Dow Jones", "US indices"),
     "russell2000": ("^RUT", "Russell 2000", "US indices"),
+    "sox": ("^SOX", "Philadelphia Semiconductor Index", "US indices"),
     "stoxx600": ("^STOXX", "STOXX Europe 600", "Europe"),
     "eurostoxx50": ("^STOXX50E", "EURO STOXX 50", "Europe"),
     "dax": ("^GDAXI", "DAX", "Europe"),
@@ -177,7 +178,7 @@ def main():
             data["errors"][key] = str(exc)
 
     groups = {
-        "US indices": ["sp500", "nasdaq", "dow", "russell2000"],
+        "US indices": ["sp500", "nasdaq", "dow", "russell2000", "sox"],
         "Europe": ["stoxx600", "eurostoxx50", "dax", "ftse100", "cac40"],
         "Rates & volatility": ["us10y", "vix"],
         "FX": ["dxy", "usdjpy", "usdkrw"],
