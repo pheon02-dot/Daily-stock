@@ -85,8 +85,9 @@ def parse_ohlc(result, symbol=None):
     highs = quote_data.get("high") or []
     lows = quote_data.get("low") or []
     closes = quote_data.get("close") or []
+    volumes = quote_data.get("volume") or []
     candles = []
-    for ts, open_, high, low, close in zip(timestamps, opens, highs, lows, closes):
+    for index, (ts, open_, high, low, close) in enumerate(zip(timestamps, opens, highs, lows, closes)):
         values = (open_, high, low, close)
         if any(value is None or not math.isfinite(value) for value in values):
             continue
@@ -97,6 +98,7 @@ def parse_ohlc(result, symbol=None):
             "high": round(float(high) * scale, 8),
             "low": round(float(low) * scale, 8),
             "close": round(float(close) * scale, 8),
+            "volume": int(volumes[index]) if index < len(volumes) and volumes[index] is not None else None,
         })
     return candles
 
@@ -186,18 +188,21 @@ def main():
     for key, (symbol, name, group) in SYMBOLS.items():
         try:
             intra_result, intra_url = fetch_chart(symbol, "5m", "1d")
-            daily_result, daily_url = fetch_chart(symbol, "1d", "3mo")
+            daily_result, daily_url = fetch_chart(symbol, "1d", "2y")
             intraday = parse_series(intra_result, symbol)
             daily = parse_series(daily_result, symbol)
             intraday_ohlc = parse_ohlc(intra_result, symbol)
             daily_ohlc = parse_ohlc(daily_result, symbol)
+            daily_3mo = daily[-66:]
+            daily_3mo_ohlc = daily_ohlc[-66:]
             meta = daily_result.get("meta") or intra_result.get("meta") or {}
             data["assets"][key] = {
                 "symbol": symbol, "name": name, "group": group,
                 "currency": meta.get("currency"), "exchange": meta.get("fullExchangeName") or meta.get("exchangeName"),
                 "timezone": meta.get("exchangeTimezoneName"), "quote": quote_summary(meta, daily),
-                "intraday_5m": intraday, "daily_3mo": daily,
-                "intraday_5m_ohlc": intraday_ohlc, "daily_3mo_ohlc": daily_ohlc,
+                "intraday_5m": intraday, "daily_3mo": daily_3mo, "daily_2y": daily,
+                "intraday_5m_ohlc": intraday_ohlc, "daily_3mo_ohlc": daily_3mo_ohlc,
+                "daily_2y_ohlc": daily_ohlc,
                 "source_urls": {"intraday": intra_url, "daily": daily_url},
             }
         except Exception as exc:
@@ -214,7 +219,7 @@ def main():
     charts = {}
     for group, keys in groups.items():
         slug = group.lower().replace(" & ", "-").replace(" ", "-")
-        for period, suffix, label in (("intraday_5m", "5m", "latest session, 5-minute"), ("daily_3mo", "3mo", "3 months, daily")):
+        for period, suffix, label in (("intraday_5m", "5m", "latest session, 5-minute"), ("daily_2y", "2y", "2 years, daily")):
             name = f"{group} — {label}"
             path = plot_group(data, keys, period, name, f"{slug}-{suffix}.png")
             if path:
