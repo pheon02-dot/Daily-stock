@@ -60,7 +60,7 @@ def fetch_chart(symbol, interval, range_):
     raise RuntimeError(f"Yahoo chart request failed: {last_error}")
 
 
-def parse_series(result):
+def parse_series(result, symbol=None):
     timestamps = result.get("timestamp") or []
     quote_data = ((result.get("indicators") or {}).get("quote") or [{}])[0]
     closes = quote_data.get("close") or []
@@ -68,17 +68,20 @@ def parse_series(result):
     for ts, close in zip(timestamps, closes):
         if close is None or not math.isfinite(close):
             continue
-        points.append({"timestamp": int(ts), "value": round(float(close), 8)})
+        value = float(close)
+        # Yahoo's ^TNX has historically used either yield-percent or yield*10
+        # conventions. Store an actual percentage yield in both cases.
+        if symbol == "^TNX" and value > 20:
+            value /= 10
+        points.append({"timestamp": int(ts), "value": round(value, 8)})
     return points
 
 
 def quote_summary(meta, daily):
-    latest = meta.get("regularMarketPrice")
-    previous = meta.get("chartPreviousClose") or meta.get("previousClose")
-    if latest is None and daily:
-        latest = daily[-1]["value"]
-    if previous is None and len(daily) > 1:
-        previous = daily[-2]["value"]
+    # The chartPreviousClose field can refer to the session before the whole
+    # requested range. Use the final two daily observations for true 1-day moves.
+    latest = daily[-1]["value"] if daily else meta.get("regularMarketPrice")
+    previous = daily[-2]["value"] if len(daily) > 1 else (meta.get("previousClose") or meta.get("chartPreviousClose"))
     if latest is None or previous in (None, 0):
         return {"latest": latest, "previous": previous, "change": None, "change_percent": None}
     change = float(latest) - float(previous)
@@ -160,8 +163,8 @@ def main():
         try:
             intra_result, intra_url = fetch_chart(symbol, "5m", "1d")
             daily_result, daily_url = fetch_chart(symbol, "1d", "3mo")
-            intraday = parse_series(intra_result)
-            daily = parse_series(daily_result)
+            intraday = parse_series(intra_result, symbol)
+            daily = parse_series(daily_result, symbol)
             meta = daily_result.get("meta") or intra_result.get("meta") or {}
             data["assets"][key] = {
                 "symbol": symbol, "name": name, "group": group,
